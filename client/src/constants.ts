@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-export const URL = "https://budgety-nest.uc.r.appspot.com";
+export const URL = process.env.REACT_APP_API_END_POINT;
 
 export interface LoginData {
   email: string;

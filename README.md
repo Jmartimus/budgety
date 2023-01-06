@@ -13,19 +13,19 @@
 <h4 align="center"> Don't be surprised the next time you go broke!<br>Create your very own budgets with Budgety.</h4>
 <br>
 <p align="center">
-<a href="https://github.com/bretpeters3n/seal-team-3/blob/master/LICENSE" target="blank">
+<a href="https://github.com/Jmartimus/budgety/blob/master/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/bretpeters3n/seal-team-3?style=flat-square" alt="seal-team-3 licence" />
 </a>
-<a href="https://github.com/bretpeters3n/seal-team-3/fork" target="blank">
+<a href="https://github.com/Jmartimus/budgety/fork" target="blank">
 <img src="https://img.shields.io/github/forks/bretpeters3n/seal-team-3?style=flat-square" alt="seal-team-3 forks"/>
 </a>
-<a href="https://github.com/bretpeters3n/seal-team-3/stargazers" target="blank">
+<a href="https://github.com/Jmartimus/budgety/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/bretpeters3n/seal-team-3?style=flat-square" alt="seal-team-3 stars"/>
 </a>
-<a href="https://github.com/bretpeters3n/seal-team-3/issues" target="blank">
+<a href="https://github.com/Jmartimus/budgety/issues" target="blank">
 <img src="https://img.shields.io/github/issues/bretpeters3n/seal-team-3?style=flat-square" alt="seal-team-3 issues"/>
 </a>
-<a href="https://github.com/bretpeters3n/seal-team-3/pulls" target="blank">
+<a href="https://github.com/Jmartimus/budgety/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/bretpeters3n/seal-team-3?style=flat-square" alt="seal-team-3 pull-requests"/>
 </a>
 <!--
@@ -37,9 +37,9 @@
 <p align="center">
     <a href="https://budgety-front.uc.r.appspot.com/" target="blank">View Demo</a>
     ·
-    <a href="https://github.com/bretpeters3n/seal-team-3/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/Jmartimus/budgety/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/bretpeters3n/seal-team-3/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/Jmartimus/budgety/issues/new/choose">Request Feature</a>
 </p>
 
 # 👋 Introducing `Budgety`
@@ -60,7 +60,7 @@ Liked it? Please give a ⭐️ to <b>Budgety</b> to build its triceps 💪 stron
 
 ### Many Thanks to all the `Stargazers` who has supported this project with stars(⭐)
 
-[![Stargazers repo roster for @bretpeters3n/seal-team-3](https://reporoster.com/stars/bretpeters3n/seal-team-3)](https://github.com/bretpeters3n/seal-team-3/stargazers)
+[![Stargazers repo roster for @bretpeters3n/seal-team-3](https://reporoster.com/stars/bretpeters3n/seal-team-3)](https://github.com/Jmartimus/budgety/stargazers)
 
 # 💻 Use Budgety
 Please access Budgety using the URL:
@@ -74,8 +74,7 @@ Please access Budgety using the URL:
 - Users can create an account, log in, log out, and have all of their user info saved to their account.
 
 ## 🏗️ Basic CRUD Capabilities for Income and Expenses
-- Users can create, read, update, and delete income entries.
-- Users can create, read, update, and delete expense entries.
+- Users can create, read, update, and delete income and expense entries.
 
 ## 💾 Save User's Budget and Persist Data to Backend
 - MongoDB and Mongoose are playing a large role in this feature.
@@ -83,79 +82,81 @@ Please access Budgety using the URL:
 ## 📱 Responsive and mobile-friendly
 - Use `Budgety` seamlessly from any device.
 
+# Prerequisite to run locally
+You must have mongoDB installed on your computer and have created a DB for budgety. Here is a link to help you: https://www.mongodb.com/basics/create-database
+
 # 🏗️ How to Set up `Budgety` for Development?
 You can run Budgety locally with a few easy steps.
 
 1. Clone the repository
 
 ```sh
-git clone https://github.com/bretpeters3n/seal-team-3.git
+git clone https://github.com/Jmartimus/budgety.git
 ```
 
 2. Change the working directory
 
 ```bash
-cd seal-team-3
+cd budgety
 ```
 
-3. Change the working directory again
-
-```bash
-cd client
-```
-
-4. Install dependencies (frontend)
-
-```bash
-npm install
-```
-
-5. Back out one directory
-
-```bash
-cd ..
-```
-
-6. Change the working directory yet again
+3. Change the working directory to server
 
 ```bash
 cd server
 ```
 
-7. Install dependencies (backend)
+4. Create `.env` file in the 'server' directory and copy the .env.sample file into it.
+
+```bash
+BACKEND_URL=http://localhost:8080
+MONGO_URI=mongodb://localhost/nest-budgety
+NODE_ENV=dev
+ORIGIN_URL=http://localhost:3000
+PORT=8080
+SECRET_KEY=your_secret_here
+```
+
+5. Install dependencies (backend)
 
 ```bash
 npm install
 ```
 
-8. Create `.env` file in 'server' and add a variable
+6. Start running the backend (this requires Mongo to be locally installed and running)
 
 ```bash
-SECRET_KEY='whatever secret key here'
+npm run start:dev
 ```
 
-9. Start running the backend (this requires Mongo to be locally installed and running)
-
-```bash
-nest start
-```
-
-10. Back out of 'server' directory
+7. Back out of 'server' directory
 
 ```bash
 cd ..
 ```
 
-11. Enter 'client' directory again
+8. Enter 'client' directory
 
 ```bash
 cd client
 ```
 
-12. Start running the frontend
+9. Create `.env` file in the 'client' directory and copy the .env.sample file into it.
 
 ```bash
-npm run start
+REACT_APP_API_END_POINT=http://localhost:8080
+```
+
+10. Install dependencies (frontend)
+
+```bash
+npm install
+```
+
+11. Start running the frontend
+
+```bash
+npm run start:dev
 ```
 
 That's All!!! Now open [localhost:3000](http://localhost:3000/) to see the app.
@@ -228,13 +229,13 @@ This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) fi
 - ✔️ Send out low balance information to email or by text message
 - ✔️ Investing advice (possible pull from API and serve as a between screen when loading data)
 <!--
-If you find something is missing, `Budgety` is listening. Please create a feature request [from here](https://github.com/bretpeters3n/seal-team-3/issues/new/choose).
+If you find something is missing, `Budgety` is listening. Please create a feature request [from here](https://github.com/Jmartimus/budgety/issues/new/choose).
 
 
 # 🤝 Contributing to `Budgety`
 Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
 
-If you wish to contribute, you can work on any features [listed here](https://github.com/bretpeters3n/seal-team-3#-upcoming-features) or create one on your own. After adding your code, please send us a Pull Request.
+If you wish to contribute, you can work on any features [listed here](https://github.com/Jmartimus/budgety#-upcoming-features) or create one on your own. After adding your code, please send us a Pull Request.
 
 > Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 -->

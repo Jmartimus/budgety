@@ -12,7 +12,11 @@ import { JwtStrategy } from './jwt.strategy';
   imports: [
     MongooseModule.forFeature([{ name: 'UserSchema', schema: UserSchema }]),
     PassportModule.register({ defaultStrategy: 'jwt' }),
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      envFilePath: `${process.cwd()}/envs/.env${
+        process.env.NODE_ENV === 'prod' ? `.${process.env.NODE_ENV}` : ''
+      }`,
+    }),
     JwtModule.register({
       secret: process.env.SECRET_KEY,
       signOptions: { expiresIn: 3600 },
