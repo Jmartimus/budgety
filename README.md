@@ -82,7 +82,7 @@ Please access Budgety using the URL:
 ## 📱 Responsive and mobile-friendly
 - Use `Budgety` seamlessly from any device.
 
-# Prerequisite to run locally
+## 📓 Prerequisite to run locally
 You must have mongoDB installed on your computer and have created a DB for budgety. Here is a link to help you: https://www.mongodb.com/basics/create-database
 
 # 🏗️ How to Set up `Budgety` for Development?
