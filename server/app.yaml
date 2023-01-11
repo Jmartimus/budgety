@@ -3,6 +3,7 @@ runtime: nodejs16
 env_variables:
   JWT_SECRET: "jghguhguish993"
   MONGO_URI: "mongodb+srv://JmartinezBudgety:budgetypassword1@cluster0.qfer0mw.mongodb.net/?retryWrites=true&w=majority"
+  ORIGIN_URL: "https://budgety-front-end.uc.r.appspot.com/"
   PORT: 8080
 
 manual_scaling:
