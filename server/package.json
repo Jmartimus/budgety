@@ -11,7 +11,7 @@
   "scripts": {
     "deploy": "gcloud app deploy --quiet",
     "build": "rimraf dist && nest build",
-    "gcp-build:prod": "cross-env NODE_ENV=prod npm run build",
+    "gcp-build": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start && node dist/main",
     "start:dev": "cross-env NODE_ENV=dev nest start --watch",
