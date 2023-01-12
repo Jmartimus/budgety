@@ -1,4 +1,8 @@
 runtime: nodejs16
+
+env_variables:
+  REACT_APP_API_END_POINT: "https://budgety-nest.uc.r.appspot.com"
+
 handlers:
   # Serve all static files with url ending with a file extension
   - url: /(.*\..+)$
