@@ -18,6 +18,7 @@ import {
 import { CreateBudgetSchema } from "../../constants";
 import { createBudget } from "../../API/BudgetMethods";
 import { useNavigate } from "react-router";
+import { NumberFormatValues } from "react-number-format";
 
 interface FormInputs {
   total: string;
@@ -86,15 +87,17 @@ const BudgetAdder: React.FC<IBudgetAdder> = ({
                     allowNegative={false}
                     decimalSeparator="."
                     decimalScale={2}
-                    allowEmptyFormatting={true}
                     placeholder="Please enter a budget amount"
                     prefix="$ "
                     type="text"
                     displayType="input"
-                    onValueChange={(values) => onChange(values.floatValue)}
+                    onValueChange={(values: NumberFormatValues) =>
+                      onChange(values.floatValue)
+                    }
                     name={name}
                     value={value}
                     onBlur={onBlur}
+                    // @ts-ignore
                     ref={ref}
                   />
                 )}

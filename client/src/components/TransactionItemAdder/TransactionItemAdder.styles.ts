@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import NumberFormat from "react-number-format";
+import { NumericFormat } from "react-number-format";
 
 interface InputBoxModifier {
   long?: boolean;
@@ -79,7 +79,7 @@ export const Input = styled.input`
   }
 `;
 
-export const AmountInput = styled(NumberFormat)`
+export const AmountInput = styled(NumericFormat)`
   font-size: 1rem;
   padding: 0.5em 0.2em;
   border: none;

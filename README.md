@@ -120,13 +120,13 @@ SECRET_KEY=your_secret_here
 5. Install dependencies (backend)
 
 ```bash
-npm install
+yarn install
 ```
 
 6. Start running the backend (this requires Mongo to be locally installed and running)
 
 ```bash
-npm run start:dev
+yarn start:dev
 ```
 
 7. Back out of 'server' directory
@@ -150,13 +150,13 @@ REACT_APP_API_END_POINT=http://localhost:8080
 10. Install dependencies (frontend)
 
 ```bash
-npm install
+yarn install
 ```
 
 11. Start running the frontend
 
 ```bash
-npm run start:dev
+yarn start:dev
 ```
 
 That's All!!! Now open [localhost:3000](http://localhost:3000/) to see the app.

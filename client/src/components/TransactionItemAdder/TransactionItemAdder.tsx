@@ -25,6 +25,7 @@ import {
   ICategory,
 } from "../../constants";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
+import { NumberFormatValues } from "react-number-format";
 
 interface FormInputs {
   title: string;
@@ -136,14 +137,16 @@ const TransactionItemAdder: React.FC<ITransactionItemAdder> = ({
                   allowNegative={false}
                   decimalSeparator="."
                   decimalScale={2}
-                  allowEmptyFormatting={true}
                   prefix="$ "
                   type="text"
                   displayType="input"
-                  onValueChange={(values) => onChange(values.floatValue)}
+                  onValueChange={(values: NumberFormatValues) =>
+                    onChange(values.floatValue)
+                  }
                   name={name}
                   value={value}
                   onBlur={onBlur}
+                  // @ts-ignore
                   ref={ref}
                 />
               )}
