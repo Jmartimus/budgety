@@ -9,9 +9,11 @@ import { TransactionModule } from './Transactions/transaction.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: `${process.cwd()}/envs/.env${
-        process.env.NODE_ENV !== 'dev' ? `.${process.env.NODE_ENV}` : ''
-      }`,
+      envFilePath: process.env.NODE_ENV
+        ? `${process.cwd()}/envs/.env${
+            process.env.NODE_ENV !== 'dev' ? `.${process.env.NODE_ENV}` : ''
+          }`
+        : `../app.yaml`,
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.MONGO_URI, {
