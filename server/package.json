@@ -17,7 +17,6 @@
     "start:prod": "cross-env NODE_ENV=prod node dist/main"
   },
   "dependencies": {
-    "@hapi/joi": "^17.1.1",
     "@nestjs/common": "^8.1.1",
     "@nestjs/config": "^1.2.0",
     "@nestjs/core": "^8.1.1",
@@ -25,7 +24,6 @@
     "@nestjs/mongoose": "^9.2.1",
     "@nestjs/passport": "^8.2.1",
     "@nestjs/platform-express": "^8.4.7",
-    "@types/hapi__joi": "^17.1.9",
     "@types/mongodb": "^4.0.7",
     "bcrypt": "^5.0.1",
     "cross-env": "^7.0.3",
