@@ -12,9 +12,9 @@
     "deploy": "gcloud app deploy --quiet",
     "build": "rm -rf dist && nest build",
     "gcp-build": "yarn build",
-    "start": "yarn start:prod && node dist/main.js",
+    "start": "yarn start:prod",
     "start:dev": "cross-env NODE_ENV=dev nest start --watch",
-    "start:prod": "cross-env NODE_ENV=prod node dist/main"
+    "start:prod": "cross-env NODE_ENV=prod node dist/main.js"
   },
   "dependencies": {
     "@nestjs/common": "^8.1.1",
