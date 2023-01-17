@@ -19,6 +19,7 @@ import { JwtStrategy } from './jwt.strategy';
         }`,
         'app.yaml',
       ],
+      isGlobal: true,
     }),
     JwtModule.register({
       secret: process.env.SECRET_KEY,
