@@ -13,8 +13,6 @@ async function bootstrap() {
     origin: process.env.ORIGIN_URL,
     credentials: true,
   });
-  await app.listen(process.env.PORT, () => {
-    console.log(process.env.NODE_ENV, process.env.MONGO_URI);
-  });
+  await app.listen(process.env.PORT);
 }
 bootstrap();
