@@ -12,15 +12,15 @@ import { JwtStrategy } from './jwt.strategy';
   imports: [
     MongooseModule.forFeature([{ name: 'UserSchema', schema: UserSchema }]),
     PassportModule.register({ defaultStrategy: 'jwt' }),
-    ConfigModule.forRoot({
-      envFilePath: [
-        `${process.cwd()}/envs/.env${
-          process.env.NODE_ENV === 'prod' ? `.${process.env.NODE_ENV}` : ''
-        }`,
-        'app.yaml',
-      ],
-      isGlobal: true,
-    }),
+    // ConfigModule.forRoot({
+    //   envFilePath: [
+    //     `${process.cwd()}/envs/.env${
+    //       process.env.NODE_ENV === 'prod' ? `.${process.env.NODE_ENV}` : ''
+    //     }`,
+    //     'app.yaml',
+    //   ],
+    //   isGlobal: true,
+    // }),
     JwtModule.register({
       secret: process.env.SECRET_KEY,
       signOptions: { expiresIn: 3600 },
