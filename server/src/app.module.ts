@@ -1,3 +1,4 @@
+import Joi from '@hapi/joi';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -15,6 +16,13 @@ import { TransactionModule } from './Transactions/transaction.module';
           }`
         : `../app.yaml`,
       isGlobal: true,
+      validationSchema: Joi.object({
+        MONGO_URI: Joi.string().required(),
+        NODE_ENV: Joi.string().required(),
+        ORIGIN_URL: Joi.string().required(),
+        PORT: Joi.number().required(),
+        SECRET_KEY: Joi.string().required(),
+      }),
     }),
     MongooseModule.forRoot(process.env.MONGO_URI, {
       useNewUrlParser: true,
