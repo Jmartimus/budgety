@@ -41,7 +41,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn start:prod",
     "start:dev": "env-cmd -f envs/.env react-scripts start",
     "start:prod": "env-cmd -f envs/.env.prod react-scripts start",
     "build": "react-scripts build",
