@@ -1,6 +1,7 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PassportStrategy } from '@nestjs/passport';
+import appConfig from 'config/app.config';
 import { Model } from 'mongoose';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { User } from './dataStructureFiles/auth.interfaces';
@@ -13,7 +14,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     private readonly authModel: Model<User>
   ) {
     super({
-      secretOrKey: process.env.SECRET_KEY,
+      secretOrKey: appConfig().secret_key,
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     });
   }
