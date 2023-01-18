@@ -13,14 +13,12 @@ import {
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
-import { URL } from "./constants";
 
 const queryClient = new QueryClient();
 
 function App() {
   const [user, setUser] = useState<boolean>(false);
   const [displayLoader, setDisplayLoader] = useState<boolean>(true);
-  console.log(URL);
 
   useEffect(() => {
     if (sessionStorage.getItem("authToken")) {
