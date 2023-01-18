@@ -15,6 +15,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     configService: ConfigService
   ) {
     console.log(
+      'JWTStrat',
+      configService.get<string>('ENV_TYPE'),
       configService.get<string>('JWT_SECRET'),
       configService.get<string>('MONGO_URI'),
       configService.get<string>('PORT'),
