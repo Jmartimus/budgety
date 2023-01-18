@@ -14,6 +14,14 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     private readonly authModel: Model<User>,
     configService: ConfigService
   ) {
+    console.log(
+      'JWTStrat',
+      configService.get<string>('ENV_TYPE'),
+      configService.get<string>('JWT_SECRET'),
+      configService.get<string>('MONGO_URI'),
+      configService.get<string>('PORT'),
+      configService.get<string>('NODE_ENV')
+    );
     super({
       secretOrKey: configService.get<string>('JWT_SECRET'),
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
