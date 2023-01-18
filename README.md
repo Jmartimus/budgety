@@ -109,18 +109,18 @@ cd server
 4. Create `.env` file in the 'server' directory and copy the .env.sample file into it.
 
 ```bash
-BACKEND_URL=http://localhost:8080
+ENV_TYPE= ENV
 MONGO_URI=mongodb://localhost/nest-budgety
 NODE_ENV=dev
 ORIGIN_URL=http://localhost:3000
 PORT=8080
-SECRET_KEY=your_secret_here
+JWT_SECRET=your_secret_here
 ```
 
 5. Install dependencies (backend)
 
 ```bash
-yarn install
+yarn
 ```
 
 6. Start running the backend (this requires Mongo to be locally installed and running)
@@ -141,22 +141,16 @@ cd ..
 cd client
 ```
 
-9. Create `.env` file in the 'client' directory and copy the .env.sample file into it.
+9.  Install dependencies (frontend)
 
 ```bash
-REACT_APP_API_END_POINT=http://localhost:8080
+yarn
 ```
 
-10. Install dependencies (frontend)
+10. Start running the frontend
 
 ```bash
-yarn install
-```
-
-11. Start running the frontend
-
-```bash
-yarn start:dev
+yarn start
 ```
 
 That's All!!! Now open [localhost:3000](http://localhost:3000/) to see the app.
