@@ -11,8 +11,8 @@ import { jwtConfig } from 'src/config/jwt.config';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: 'UserSchema', schema: UserSchema }]),
-    PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.registerAsync(jwtConfig),
+    PassportModule.register({ defaultStrategy: 'jwt' }),
   ],
   providers: [AuthServices, JwtStrategy],
   controllers: [AuthController],
