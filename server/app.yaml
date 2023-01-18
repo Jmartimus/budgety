@@ -1,9 +1,11 @@
 runtime: nodejs16
 
 env_variables:
+  ENV_TYPE: "YAML"
   MONGO_URI: "mongodb+srv://JmartinezBudgety:budgetypassword1@cluster0.qfer0mw.mongodb.net/?retryWrites=true&w=majority"
   NODE_ENV: "prod"
   ORIGIN_URL: "https://budgety-front-end.uc.r.appspot.com"
+  PORT: 8080
   JWT_SECRET: "jghguhguish993"
 
 manual_scaling:
